@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
 using System.Threading;
-using PDFPatcher.Common;
+using PDFPatcher.Common; 
 
 namespace PDFPatcher
 {
@@ -11,6 +11,8 @@ namespace PDFPatcher
 	{
 		[STAThread]
 		static void Main(string[] args) {
+
+			 
 			using (var m = new Mutex(true, Constants.AppEngName)) {
 				if (FormHelper.IsCtrlKeyDown || m.WaitOne(100)) {
 					Application.EnableVisualStyles();
